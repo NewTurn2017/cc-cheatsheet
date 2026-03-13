@@ -101,6 +101,7 @@
     border: 1px solid #FDEBD6; flex-shrink: 0;
   }
   .desc { color: #5A5550; font-size: 10.5px; }
+  .alias-cmd { white-space: normal; word-break: break-all; font-size: 9px; }
 
   /* ── Annotation (해설) ── */
   .anno {
@@ -227,6 +228,7 @@
     .cmd-list { gap: 0.3mm; }
     .cmd-list li { font-size: 7px; gap: 1.5mm; }
     .cmd { font-size: 6.5px; padding: 0.2mm 1.2mm; }
+    .alias-cmd { white-space: normal; word-break: break-all; font-size: 5.5px; }
     .desc { font-size: 6.8px; }
     .anno { font-size: 6px; }
 
@@ -332,9 +334,9 @@
         <div class="sub-title">Bypass 자동 실행 Alias 설정</div>
         <ul class="cmd-list">
           <li><span class="cmd">Mac/Linux</span> <span class="desc"><code>~/.zshrc</code> 또는 <code>~/.bashrc</code>에 추가:</span></li>
-          <li style="padding-left:8px"><span class="cmd" style="font-size:9px">alias claude='claude --dangerously-skip-permissions'</span></li>
+          <li style="padding-left:8px"><span class="cmd alias-cmd">alias claude='claude --dangerously-skip-permissions'</span></li>
           <li><span class="cmd">Windows</span> <span class="desc">PowerShell <code>$PROFILE</code>에 추가:</span></li>
-          <li style="padding-left:8px"><span class="cmd" style="font-size:9px">Set-Alias claude 'claude --dangerously-skip-permissions'</span></li>
+          <li style="padding-left:8px"><span class="cmd alias-cmd">Set-Alias claude 'claude --dangerously-skip-permissions'</span></li>
         </ul>
         <div class="tip-box" style="margin-top:2px">
           <strong>주의:</strong> Bypass 모드는 편리하지만 AI가 모든 파일/명령을 승인 없이 실행합니다. 신뢰할 수 있는 프로젝트에서만 사용하세요!
