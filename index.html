@@ -12,19 +12,16 @@
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     background: #FFF8F3;
     color: #2D2A26;
-    width: 210mm;
-    height: 297mm;
+    max-width: 960px;
     margin: 0 auto;
-    overflow: hidden;
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
   }
 
   .page {
-    width: 210mm; height: 297mm;
-    padding: 5mm 6mm 4mm 6mm;
+    padding: 10px 12px 8px 12px;
     display: flex; flex-direction: column;
-    gap: 1.8mm;
+    gap: 5px;
   }
 
   /* ── Header ── */
@@ -49,9 +46,8 @@
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1.8mm;
-    flex: 1; min-height: 0;
+    grid-template-rows: auto auto auto auto;
+    gap: 5px;
   }
   .col-span-2 { grid-column: span 2; }
   .row-span-2 { grid-row: span 2; }
@@ -274,7 +270,7 @@
             <div class="mode-desc">편집/실행 모두 사용자 승인</div>
           </div>
         </div>
-        <div class="tip-box" style="margin-top:auto">
+        <div class="tip-box" style="margin-top:2px">
           <strong>권장:</strong> 처음엔 Default로 시작, 익숙해지면 Accept Edits로 전환
         </div>
       </div>
@@ -289,7 +285,7 @@
           <tr><td>Sonnet <span class="badge badge-blue">Balanced</span></td><td>코드 생성, 디버깅 등 표준 작업</td></tr>
           <tr><td>Opus <span class="badge badge-purple">Powerful</span></td><td>복잡한 추론, 설계 등 고급 작업</td></tr>
         </table>
-        <div class="tip-box" style="margin-top:auto">
+        <div class="tip-box" style="margin-top:2px">
           <strong>UltraThink:</strong> 터미널에서 고급 사고 모드 활성화 <span class="anno">— AI가 더 깊이 생각</span>
         </div>
       </div>
@@ -307,7 +303,7 @@
           <tr><td>.claude/skills/</td><td>커스텀 스킬 저장 위치</td></tr>
           <tr><td>.env</td><td>API 키 / 환경변수 <span class="anno">— 절대 공개 금지!</span></td></tr>
         </table>
-        <div class="tip-box" style="margin-top:auto">
+        <div class="tip-box" style="margin-top:2px">
           <strong>/init</strong> 명령으로 CLAUDE.md를 자동 생성할 수 있습니다
         </div>
       </div>
@@ -331,7 +327,7 @@
           <li><span class="cmd">Agent</span> <span class="desc">AI 실행자 <span class="anno">— 독립 메모리, 모델 선택 가능</span></span></li>
           <li><span class="cmd">Tools</span> <span class="desc">실행 도구 <span class="anno">— MCP, API, CLI 명령 등</span></span></li>
         </ul>
-        <div class="tip-box" style="margin-top:auto">
+        <div class="tip-box" style="margin-top:2px">
           <strong>핵심:</strong> Workflow가 전체 흐름, Agent가 각 단계 실행, Tools가 실제 도구
         </div>
       </div>
@@ -435,7 +431,7 @@
           <tr><td>Pinecone</td><td>벡터 DB <span class="anno">— AI 유사도 검색용 데이터베이스</span></td></tr>
           <tr><td>n8n / Make</td><td>노코드 자동화 <span class="anno">— 코딩 없이 워크플로우 구축</span></td></tr>
         </table>
-        <div class="tip-box" style="margin-top:auto">
+        <div class="tip-box" style="margin-top:2px">
           <strong>입문 추천:</strong> VS Code + GitHub + Vercel 조합이면 충분!
         </div>
       </div>
