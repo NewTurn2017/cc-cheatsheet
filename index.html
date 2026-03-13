@@ -201,9 +201,56 @@
   .pdf-btn svg { width: 14px; height: 14px; }
 
   @media print {
-    body { background: white; }
-    .page { padding: 5mm 6mm 4mm 6mm; }
+    @page { size: A4; margin: 0; }
+    body { background: white; width: 210mm; height: 297mm; min-height: 0; }
+    .page { padding: 4mm 5mm 3mm 5mm; gap: 2mm; min-height: 0; height: 297mm; }
     .pdf-btn { display: none !important; }
+
+    /* Shrink everything for A4 fit */
+    .header { padding: 3mm 5mm; border-radius: 5px; }
+    .header h1 { font-size: 14px; }
+    .header .subtitle { font-size: 8px; }
+    .header-right { font-size: 7px; }
+    .logo { width: 28px; height: 28px; font-size: 15px; }
+
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2mm; flex: 1;
+    }
+    .col-span-2 { grid-column: span 2; }
+    .row-span-2 { grid-row: span 2; }
+
+    .section { padding: 2mm 2.5mm; border-radius: 4px; }
+    .section-title { font-size: 7.5px; margin-bottom: 1.2mm; padding-bottom: 0.8mm; gap: 1mm; }
+    .section-title .icon { width: 13px; height: 13px; font-size: 7.5px; }
+
+    .cmd-list { gap: 0.3mm; }
+    .cmd-list li { font-size: 7px; gap: 1.5mm; }
+    .cmd { font-size: 6.5px; padding: 0.2mm 1.2mm; }
+    .desc { font-size: 6.8px; }
+    .anno { font-size: 6px; }
+
+    .kv-table { font-size: 6.8px; }
+    .kv-table td { padding: 0.5mm 1mm; }
+    .kv-table td:first-child { font-size: 6.5px; }
+
+    .badge { font-size: 5.5px; padding: 0.2mm 1mm; }
+
+    .sub-title { font-size: 6.5px; margin: 1mm 0 0.3mm 0; }
+    .tip-box { font-size: 6.2px; padding: 1mm 1.5mm; margin-top: 1mm; }
+    .mode-pill { padding: 0.8mm 1.2mm; }
+    .mode-pill .mode-name { font-size: 6.5px; }
+    .mode-pill .mode-desc { font-size: 5.8px; }
+    .mode-grid { gap: 1mm; }
+
+    .diagram-box { padding: 1mm 2mm; margin-top: 0.5mm; }
+    .flow-item { font-size: 6.5px; padding: 0.5mm 1.5mm; }
+    .flow-arrow { font-size: 9px; }
+    .diagram-flow { gap: 1.5mm; }
+
+    .footer { font-size: 5.5px; padding-top: 1mm; }
+    .footer-brand { font-size: 5.5px; gap: 1.5mm; }
+    .footer-logo { width: 13px; height: 13px; }
   }
 </style>
 </head>
